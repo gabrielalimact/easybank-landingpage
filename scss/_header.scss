@@ -1,0 +1,88 @@
+.header {
+  nav {
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
+    position: relative;
+    background-color: $white;
+  }
+  &_logo {
+    img {
+      width: 10rem;
+    }
+  }
+
+  &_toggle {
+    // mobile menu
+    > span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background-color: $darkBlue;
+      transition: all 200ms ease-out;
+      transform-origin: 3px 1px;
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &_links {
+    a {
+      font-size: $font-sm;
+      color: $grayishBlue;
+      transition: color 300ms ease-out;
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+
+      &:hover {
+        color: $darkBlue;
+        border-bottom: 3px solid $limeGreen;
+        padding-bottom: 10px;
+        transition: padding-bottom 300ms ease-out;
+      }
+    }
+  }
+  .overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient($darkBlue, transparent);
+  }
+
+  // hamburguer open styles
+  &.open {
+    .header_toggle {
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &_menu {
+    background: $white;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    position: absolute;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+    a {
+      font-size: $font-med;
+      color: $grayishBlue;
+      padding: 10px;
+      text-align: center;
+      display: block;
+    }
+  }
+}
