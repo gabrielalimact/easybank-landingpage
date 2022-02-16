@@ -1,6 +1,6 @@
 # Easybank landing page (Frontend Mentor)
 
-### Para acessar o site final clique [aqui]().
+### Para acessar o site final clique [aqui](https://gabrielalimact.github.io/easybank-landingpage/).
 
 ## 🚀 Tecnologias:
 
